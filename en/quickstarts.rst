@@ -14,7 +14,7 @@ OSGeo-Live contains TinyOWS, a high performance, Transactional Web Feature Servi
 
 Follow the `TinyOWS Quickstart`_.
 
-.. _`TinyOWS Quickstart`: ../../en/quickstarts/tinyows_quickstart.html
+.. _`TinyOWS Quickstart`: ../../../en/quickstart/tinyows_quickstart.html
 
 
 Working with QGIS Server
@@ -24,4 +24,4 @@ QGIS Server allows you to publish your QGIS projects as a OGC web map service (W
 
 Follow the `QGIS Server Quickstart`_.
 
-.. _`QGIS Server Quickstart`: ../../en/quickstarts/qgis_mapserver_quickstart.html
+.. _`QGIS Server Quickstart`: ../../../en/quickstart/qgis_mapserver_quickstart.html
