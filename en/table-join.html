@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Table join &mdash; OSGeo-Live QGIS tutorials</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OSGeo-Live QGIS tutorials" href="../index.html" />
+    <link rel="next" title="New symbology features" href="new-symbology.html" />
+    <link rel="prev" title="Forms" href="forms.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="new-symbology.html" title="New symbology features"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="forms.html" title="Forms"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="table-join">
+<h1>Table join<a class="headerlink" href="#table-join" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="table-join-admin1-admin0">
+<h2>Table Join Admin1 -&gt; Admin0<a class="headerlink" href="#table-join-admin1-admin0" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Choose <em class="menuselection">File ‣ Open Project...</em> from the menu bar</p>
+</li>
+<li><p class="first">Select <tt class="file docutils literal"><span class="pre">QGIS-NaturalEarth-Example.qgs</span></tt> and press <em class="guilabel">Open</em></p>
+</li>
+<li><p class="first">Zoom in somewhere to speed up redrawing</p>
+</li>
+<li><p class="first">Click <em class="menuselection">Layer ‣ Add PostGIS Layer...</em>.</p>
+</li>
+<li><p class="first">Press <em class="guilabel">Connect</em> on NaturalEarth connection</p>
+</li>
+<li><p class="first">Select <tt class="file docutils literal"><span class="pre">10m_admin_0_countries</span></tt> and  <tt class="file docutils literal"><span class="pre">10m_admin_1_states_provinces</span></tt> in the table list</p>
+</li>
+<li><p class="first">Press <em class="guilabel">Add</em> and <em class="guilabel">Close</em></p>
+</li>
+<li><p class="first">Double click <tt class="file docutils literal"><span class="pre">10m_admin_1_states_provinces</span></tt> in the Layers tree</p>
+</li>
+<li><p class="first">Go to the tab <em class="guilabel">Joins</em> and press the <em class="guilabel">+</em> button</p>
+</li>
+<li><p class="first">Select <tt class="file docutils literal"><span class="pre">10m_admin_0_countries</span></tt>, <tt class="file docutils literal"><span class="pre">adm0_a3</span></tt>, <tt class="file docutils literal"><span class="pre">adm0_a3</span></tt> and press <em class="guilabel">OK</em>:</p>
+<a class="reference internal image-reference" href="../_images/tablejoin.png"><img alt="../_images/tablejoin.png" src="../_images/tablejoin.png" style="width: 716.8px; height: 537.6px;" /></a>
+</li>
+<li><p class="first">To see the joined information, right click <tt class="file docutils literal"><span class="pre">10m_admin_1_states_provinces</span></tt> in the Layers tree and select <em class="menuselection">Open attribute table</em></p>
+<ul class="simple">
+<li>You should see all admin0 attributes at the end of a admin line</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Table join</a><ul>
+<li><a class="reference internal" href="#table-join-admin1-admin0">Table Join Admin1 -&gt; Admin0</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="forms.html"
+                        title="previous chapter">Forms</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="new-symbology.html"
+                        title="next chapter">New symbology features</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="new-symbology.html" title="New symbology features"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="forms.html" title="Forms"
+             >previous</a> |</li>
+        <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Pirmin Kalberer.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.1.
+    </div>
+  </body>
+</html>
