@@ -9,19 +9,15 @@ Welcome to the OSGeo-Live QGIS tutorials!
 This tutorial collection of advanced QGIS features is based on `OSGeo-Live <http://live.osgeo.org>`_, a bootable DVD, USB thumb drive or Virtual
 Machine.
 
+:doc:`Contents <en/index>`
 
-Contents
-================================================================================
 
-.. toctree::
-   :maxdepth: 2
+Willkommen zu den OSGeo-Live QGIS tutorials!
+============================================
 
-   en/raster-calculator
-   en/forms
-   en/table-join
-   en/new-symbology
-   en/advanced-labelling
-   en/quickstarts
+Der Inhalt dieser Dokumentation basiert auf `OSGeo-Live <http://live.osgeo.org>`_, einer Live-DVD, USB stick oder virtuellen Maschine
+
+:doc:`Inhalt <de/index>`
 
 
 .. Other tutorials:

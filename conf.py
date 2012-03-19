@@ -170,7 +170,7 @@ htmlhelp_basename = 'QGISTutorials'
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-latex_paper_size = 'letter'
+latex_paper_size = 'a4'
 
 # The font size ('10pt', '11pt' or '12pt').
 latex_font_size = '10pt,oneside,openany' #Hack for removing blank pages (http://groups.google.com/group/sphinx-dev/browse_thread/thread/ee301b14175ad5bb/)
