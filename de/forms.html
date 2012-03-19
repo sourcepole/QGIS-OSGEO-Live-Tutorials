@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Formulare &mdash; OSGeo-Live QGIS tutorials</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OSGeo-Live QGIS tutorials" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="formulare">
+<h1>Formulare<a class="headerlink" href="#formulare" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="formulare-mit-benutzerdefinierten-elementen">
+<h2>Formulare mit Benutzerdefinierten Elementen<a class="headerlink" href="#formulare-mit-benutzerdefinierten-elementen" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Starten sie QGIS. Sie können die gewünschte Sprache unter <em class="menuselection">Settings ‣ Options... ‣ Locale</em> einstellen.</p>
+</li>
+<li><p class="first">Wählen sie <em class="menuselection">Datei ‣ Projekt öffnen...</em> vom Menü</p>
+</li>
+<li><p class="first">Wählen sie die Datei <tt class="file docutils literal"><span class="pre">/usr/local/share/qgis/QGIS-NaturalEarth-Example.qgs</span></tt> und drücken sie <em class="guilabel">Open</em></p>
+</li>
+<li><p class="first">Zoomen sie auf einen kleineren Ausschnitt, damit das Neuzeichnen der Kartenansicht schneller geht</p>
+</li>
+<li><p class="first">Klicken sie <em class="menuselection">Layer ‣ PostGIS-Layer hinzufügen...</em>.</p>
+</li>
+<li><p class="first">Drücken sie <em class="guilabel">Verbinden</em> bei der NaturalEarth Verbindung</p>
+</li>
+<li><p class="first">Wählen sie <tt class="file docutils literal"><span class="pre">10m_populated_places_simple</span></tt> in der Liste</p>
+</li>
+<li><p class="first">Drücken sie <em class="guilabel">Hinzufügen</em> und <em class="guilabel">Schliessen</em></p>
+</li>
+<li><p class="first">Doppelklick auf <tt class="file docutils literal"><span class="pre">10m_populated_places_simple</span></tt> im Layerbaum</p>
+</li>
+<li><p class="first">Gehen sie zum Reiter <em class="guilabel">Felder</em> und wählen sie die gewünschten Bearbeitungselemente:</p>
+<a class="reference internal image-reference" href="../_images/forms_fields.png"><img alt="../_images/forms_fields.png" src="../_images/forms_fields.png" style="width: 716.8px; height: 537.6px;" /></a>
+</li>
+<li><p class="first">Erzeugen sie für das Feld <tt class="file docutils literal"><span class="pre">ISO_A2</span></tt> eine Wertabbildung und laden sie Daten aus einem Layer:</p>
+<a class="reference internal image-reference" href="../_images/forms_valuemap.png"><img alt="../_images/forms_valuemap.png" src="../_images/forms_valuemap.png" style="width: 716.8px; height: 537.6px;" /></a>
+</li>
+<li><p class="first">Schalten sie den Bearbeitungsmodus ein und fügen sie einen Punkt hinzu, um das neue Editierformular zu sehen:</p>
+</li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/forms_digitizing.png"><img alt="../_images/forms_digitizing.png" src="../_images/forms_digitizing.png" style="width: 716.8px; height: 537.6px;" /></a>
+</div></blockquote>
+</div>
+<div class="section" id="formulare-mit-dem-qt-designer">
+<h2>Formulare mit dem QT Designer<a class="headerlink" href="#formulare-mit-dem-qt-designer" title="Permalink to this headline">¶</a></h2>
+<p>QGIS unterstützt auch vollständig benutzerdefinierte Formualre, die mit dem Qt Desinger erstellt worden sind.
+Es werden Namenskonventionen für Datenfelder und Ausdrücke verwendet.
+Dadurch kann QGIS die Formulare verwenden, ohne dass Code kompiliert werden muss.</p>
+<p>Öffnen sie eine Konsole, um Qt designer zu installieren:</p>
+<ol class="arabic simple">
+<li>Gehen sie zum Menüeintrag <em class="menuselection">Applications ‣ Accessories ‣ Terminal Emulator</em></li>
+<li>Geben sie folgenden Text in der Konsole ein <strong class="command">sudo apt-get update &amp;&amp; sudo apt-get install qt4-designer</strong> (Password: user)</li>
+</ol>
+<p>Nun erzeugen wir ein benutzerdefiniertes Formular mit dem QT Designer:</p>
+<ol class="arabic simple">
+<li>Wählen sie <em class="menuselection">Applications ‣ Development ‣ QT 4 Designer</em></li>
+<li>Wählen sie “Dialog with Buttons Bottom”</li>
+<li>Ziehen sie die gewünschten Bearbeitungselemente auf die Dialogfläche. Der Dialog könnte etwa so aussehen:</li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/forms_designer.png"><img alt="../_images/forms_designer.png" src="../_images/forms_designer.png" style="width: 135.6px; height: 92.8px;" /></a>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Es ist wichtig, dass sie die Eingabeelemente gleich benennen wie das Attribut, welches mit dem Element bearbeitet wird. Im Unterfenster &#8216;Object Inspector&#8217; des Qt Designers können die Namen der Elemente gesetzt werden:</li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="../_images/forms_designer_inspector.png"><img alt="../_images/forms_designer_inspector.png" src="../_images/forms_designer_inspector.png" style="width: 146.0px; height: 120.4px;" /></a>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Speichern sie das Formular als <tt class="file docutils literal"><span class="pre">custom_form.ui</span></tt> im Verzeichnis /home/user</li>
+</ol>
+<p>Öffnen sie QGIS erneut und:</p>
+<ol class="arabic simple">
+<li>Doppelklicken sie den Eintrag <tt class="file docutils literal"><span class="pre">10m_populated_places_simple</span></tt> im Layerbaum</li>
+<li>Gehen sie zum Reiter <em class="guilabel">Allgemein</em> und wählen sie <tt class="file docutils literal"><span class="pre">/home/user/custom_form.ui</span></tt> als <em class="guilabel">UI zur Bearbeitung</em>. Drücken sie <em class="guilabel">OK</em></li>
+<li>Schalten sie den Bearbeitungsmodus ein und fügen sie einen Punkt hinzu, um das neue Formular zu sehen.</li>
+</ol>
+</div>
+<div class="section" id="initialisierungsfunktionen-fur-formulare-mit-python">
+<h2>Initialisierungsfunktionen für Formulare mit Python<a class="headerlink" href="#initialisierungsfunktionen-fur-formulare-mit-python" title="Permalink to this headline">¶</a></h2>
+<p>In QGIS kann pro Layer eine Pythonfunktion, die bei der Initialisierung eines Formulares aufgerufen wird, angegeben werden.
+Neben der eigentlichen Initialisierung können auch Slots definiert und mit den Signalen des Dialogs verbunden werden.
+In unserem Beispiel validieren wir dadurch die Eingabe des Benutzers, sobald Ok gedrückt wird:</p>
+<ol class="arabic simple">
+<li>Öffnen sie einen Texteditor und geben sie das folgende Pythonprogramm ein. Speichern sie die Datei unter <tt class="file docutils literal"><span class="pre">/home/user/PlaceForm.py</span></tt>:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">PyQt4.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">nameField</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">myDialog</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="k">def</span> <span class="nf">formOpen</span><span class="p">(</span> <span class="n">dialog</span><span class="p">,</span> <span class="n">layerid</span><span class="p">,</span> <span class="n">featureid</span> <span class="p">):</span>
+  <span class="k">global</span> <span class="n">myDialog</span>
+  <span class="n">myDialog</span> <span class="o">=</span> <span class="n">dialog</span>
+  <span class="k">global</span> <span class="n">nameField</span>
+  <span class="n">nameField</span> <span class="o">=</span> <span class="n">dialog</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span> <span class="n">QLineEdit</span><span class="p">,</span> <span class="s">&quot;name&quot;</span> <span class="p">)</span>
+  <span class="n">nameField</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s">&quot;Inserting a placename is mandatory&quot;</span><span class="p">)</span>
+  <span class="n">buttonBox</span> <span class="o">=</span> <span class="n">dialog</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QDialogButtonBox</span><span class="p">,</span> <span class="s">&quot;buttonBox&quot;</span> <span class="p">)</span>
+  <span class="n">buttonBox</span><span class="o">.</span><span class="n">accepted</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">accept</span><span class="p">)</span>
+  <span class="n">buttonBox</span><span class="o">.</span><span class="n">accepted</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">validate</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">validate</span><span class="p">():</span>
+  <span class="k">if</span> <span class="n">nameField</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="o">==</span> <span class="s">&quot;Inserting a placename is mandatory&quot;</span> <span class="ow">or</span> <span class="n">nameField</span><span class="o">.</span><span class="n">text</span><span class="p">()</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">():</span>
+    <span class="n">QMessageBox</span><span class="o">.</span><span class="n">critical</span><span class="p">(</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&quot;Error&quot;</span><span class="p">,</span> <span class="s">&quot;Inserting a placename is mandatory&quot;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">myDialog</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Doppelklicken sie den Eintrag <tt class="file docutils literal"><span class="pre">10m_populated_places_simple</span></tt> im Layerbaum</li>
+<li>Gehen sie zum Reiter <em class="guilabel">Allgemein</em> und geben sie &#8216;PlaceForm.formOpen&#8217; als Initialisierungsfunktion an.</li>
+<li>Schalten sie den Bearbeitungsmodus ein und fügen sie einen Punkt hinzu, um zu testen, ob das Pythonskript funktioniert.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Formulare</a><ul>
+<li><a class="reference internal" href="#formulare-mit-benutzerdefinierten-elementen">Formulare mit Benutzerdefinierten Elementen</a></li>
+<li><a class="reference internal" href="#formulare-mit-dem-qt-designer">Formulare mit dem QT Designer</a></li>
+<li><a class="reference internal" href="#initialisierungsfunktionen-fur-formulare-mit-python">Initialisierungsfunktionen für Formulare mit Python</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Pirmin Kalberer.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

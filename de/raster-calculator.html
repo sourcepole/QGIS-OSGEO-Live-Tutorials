@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Raster calculator &mdash; OSGeo-Live QGIS tutorials</title>
+    <title>Rasterrechner &mdash; OSGeo-Live QGIS tutorials</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,9 +22,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="OSGeo-Live QGIS tutorials" href="../index.html" />
-    <link rel="next" title="Forms" href="forms.html" />
-    <link rel="prev" title="Welcome to the OSGeo-Live QGIS tutorials!" href="../index.html" /> 
+    <link rel="top" title="OSGeo-Live QGIS tutorials" href="../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -33,12 +31,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="forms.html" title="Forms"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="../index.html" title="Welcome to the OSGeo-Live QGIS tutorials!"
-             accesskey="P">previous</a> |</li>
         <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
       </ul>
     </div>  
@@ -48,29 +40,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="raster-calculator">
-<h1>Raster calculator<a class="headerlink" href="#raster-calculator" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="using-the-raster-calculator">
-<h2>Using the raster calculator<a class="headerlink" href="#using-the-raster-calculator" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="rasterrechner">
+<h1>Rasterrechner<a class="headerlink" href="#rasterrechner" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="verwendung-des-rasterrechners">
+<h2>Verwendung des Rasterrechners<a class="headerlink" href="#verwendung-des-rasterrechners" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Choose <em class="menuselection">File ‣ New Project</em></p>
+<li><p class="first">Wählen sie <em class="menuselection">Datei ‣ Neues Projekt</em></p>
 </li>
-<li><p class="first">Click <em class="menuselection">Layer ‣ Add Raster Layer...</em></p>
+<li><p class="first">Klicken sie auf <em class="menuselection">Layer ‣ Rasterlayer hinzufügen...</em></p>
 </li>
-<li><p class="first">Open <tt class="file docutils literal"><span class="pre">/home/user/data/raster/SRTM_u03_n041e002.tif</span></tt></p>
+<li><p class="first">Öffnen sie die Datei <tt class="file docutils literal"><span class="pre">/home/user/data/raster/SRTM_u03_n041e002.tif</span></tt></p>
 </li>
-<li><p class="first">Click <em class="menuselection">Raster ‣ Raster calculator...</em></p>
+<li><p class="first">Klicken sie auf <em class="menuselection">Raster ‣ Rasterrechner...</em></p>
 </li>
-<li><p class="first">Enter output raster file and a formula:</p>
+<li><p class="first">Geben sie eine Formel und eine Datei für das Resultat ein:</p>
 <a class="reference internal image-reference" href="../_images/rastercalc_mountains.png"><img alt="../_images/rastercalc_mountains.png" src="../_images/rastercalc_mountains.png" style="width: 722.4px; height: 556.5px;" /></a>
 </li>
-<li><p class="first">Double click <tt class="file docutils literal"><span class="pre">mountains</span></tt> in the Layers tree and set the color map style to <em class="guilabel">Pseudocolor</em></p>
+<li><p class="first">Doppelklicken sie <tt class="file docutils literal"><span class="pre">mountains</span></tt> Im Layerbaum und setzen sie :guilabel: <cite>Einkanaleigenschaften &#8211;&gt;Farbabbildung</cite> auf <em class="guilabel">Pseudofarben</em></p>
 <a class="reference internal image-reference" href="../_images/rastercalc_colormap.png"><img alt="../_images/rastercalc_colormap.png" src="../_images/rastercalc_colormap.png" style="width: 722.4px; height: 556.5px;" /></a>
 </li>
-<li><p class="first">Combine both rasters to remove all points lower than 1000 meters:</p>
+<li><p class="first">Kombinieren sie beide Raster, um alle Punkte unter 1000 Meter zu löschen:</p>
 <a class="reference internal image-reference" href="../_images/rastercalc_srtm_mountains_only.png"><img alt="../_images/rastercalc_srtm_mountains_only.png" src="../_images/rastercalc_srtm_mountains_only.png" style="width: 722.4px; height: 556.5px;" /></a>
 </li>
-<li><p class="first">The resulting raster is a DEM without the points lower than 1000 meters:</p>
+<li><p class="first">Das Resultat ist ein DEM ohne Punkte unter 1000 Meter:</p>
 <a class="reference internal image-reference" href="../_images/rastercalc_srtm_mountains_only_pseudocolor.png"><img alt="../_images/rastercalc_srtm_mountains_only_pseudocolor.png" src="../_images/rastercalc_srtm_mountains_only_pseudocolor.png" style="width: 722.4px; height: 556.5px;" /></a>
 </li>
 </ol>
@@ -85,18 +77,12 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Raster calculator</a><ul>
-<li><a class="reference internal" href="#using-the-raster-calculator">Using the raster calculator</a></li>
+<li><a class="reference internal" href="#">Rasterrechner</a><ul>
+<li><a class="reference internal" href="#verwendung-des-rasterrechners">Verwendung des Rasterrechners</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../index.html"
-                        title="previous chapter">Welcome to the OSGeo-Live QGIS tutorials!</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="forms.html"
-                        title="next chapter">Forms</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -120,12 +106,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="forms.html" title="Forms"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="../index.html" title="Welcome to the OSGeo-Live QGIS tutorials!"
-             >previous</a> |</li>
         <li><a href="../index.html">OSGeo-Live QGIS tutorials</a> &raquo;</li> 
       </ul>
     </div>
