@@ -12,3 +12,4 @@ Inhalt
    raster-calculator.rst
    table-join.rst
    forms.rst
+   qgis-server-webclient.rst
