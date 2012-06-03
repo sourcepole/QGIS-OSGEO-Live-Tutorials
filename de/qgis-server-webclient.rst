@@ -10,17 +10,17 @@ WMS mit QGIS Server
 
 #. Öffnen sie einen Webbrowser (z.B. Firefox)
 
-#. Geben sie in der Adresszeile folgende URL ein http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/$USER/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&REQUEST=GetCapabilities. Der Server Antwortet mit einem Capabilities Dokument, in dem u.a. Informationen zum Service und den verfügbaren Ebenen enthalten sind. Das QGIS Projekt, welches publiziert wird, muss als Parameter mitgegeben werden.
+#. Geben sie in der Adresszeile folgende URL ein http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&REQUEST=GetCapabilities. Der Server Antwortet mit einem Capabilities Dokument, in dem u.a. Informationen zum Service und den verfügbaren Ebenen enthalten sind. Das QGIS Projekt, welches publiziert wird, muss als Parameter mitgegeben werden.
 
-#. Nun fragen wir einen Kartenabschnitt an: http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/$USER/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&REQUEST=GetMap&WIDTH=300&HEIGHT=300&BBOX=30,0,50,20&FORMAT=image/png&LAYERS=HYP_50M_SR_W&STYLES=default. Modifizieren sie die Parameter und schauen sie, wie sich die Karte verändert.
+#. Nun fragen wir einen Kartenabschnitt an: http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&REQUEST=GetMap&WIDTH=300&HEIGHT=300&BBOX=30,0,50,20&FORMAT=image/png&LAYERS=HYP_50M_SR_W&STYLES=default. Modifizieren sie die Parameter und schauen sie, wie sich die Karte verändert.
 
-#. Für Informationen zu den Elementen in der Karte gibt es die GetFeatureInfo Anfrage: http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/$USER/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&LAYERS=&QUERY_LAYERS=10m_populated_places_simple&STYLES=&BBOX=3.442999,43.068871,8.964614,49.504661&FEATURE_COUNT=10&HEIGHT=528&WIDTH=453&FORMAT=image/jpeg&INFO_FORMAT=text/xml&SRS=EPSG:4326&X=332&Y=213
+#. Für Informationen zu den Elementen in der Karte gibt es die GetFeatureInfo Anfrage: http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/QGIS-NaturalEarth-Example.qgs&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo&LAYERS=&QUERY_LAYERS=10m_populated_places_simple&STYLES=&BBOX=3.442999,43.068871,8.964614,49.504661&FEATURE_COUNT=10&HEIGHT=528&WIDTH=453&FORMAT=image/jpeg&INFO_FORMAT=text/xml&SRS=EPSG:4326&X=332&Y=213
 
 #. Um diese Informationen nicht immer von Hand eingeben zu müssen, benutzen wir nun einen komfortablen WMS Client. Starten sie QGIS.
  
 #. Wählen sie :menuselection:`Layer --> WMS Layer hinzufügen...` vom Menü.
 
-#. Drücken sie auf 'Neu' und geben sie die WMS Adresse ein: http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/$USER/QGIS-NaturalEarth-Example.qgs& . Kreuzen sie die Optionen 'Gemeldete GetMap-URI aus Diensteigenschaften ignorieren' und 'Gemeldete GetFeatureInfo-URI ignorieren an.
+#. Drücken sie auf 'Neu' und geben sie die WMS Adresse ein: :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/QGIS-NaturalEarth-Example.qgs&`. Kreuzen sie die Optionen 'Gemeldete GetMap-URI aus Diensteigenschaften ignorieren' und 'Gemeldete GetFeatureInfo-URI ignorieren an.
 
    .. image:: ../images/wms_connection.png
     :scale: 70%
@@ -37,7 +37,7 @@ QGIS Webclient
 
 #. Öffnen sie einen Webbrowser (z.B. Firefox)
 
-#. Für die Webkarte geben sie in der Adresszeile folgende URL ein: http://$USER.localhost/qgis-web-client/site/qgiswebclient.html?map=/home/geo01/QGIS-NaturalEarth-Example.qgs&format=image/png&visibleLayers=HYP_50M_SR_W
+#. Für die Webkarte geben sie in der Adresszeile folgende URL ein: http://user.localhost/qgis-web-client/site/qgiswebclient.html?map=/home/geo01/QGIS-NaturalEarth-Example.qgs&format=image/png&visibleLayers=HYP_50M_SR_W
 
    .. image:: ../images/qgis_webclient.png
     :scale: 70%
@@ -62,9 +62,46 @@ Die Webkarte aufpeppen
 QGIS Cloud
 =================================================================================
 
+
+http://qgiscloud.com/pages/quickstart
+
+
+QGIS Karte:
+
+#. :menuselection:`Datei --> Neues Projekt`
+
+#. :menuselection:`Erweiterungen --> OpenLayer plugin --> Add Google Streets Layer`
+
+#. :menuselection:`Layer --> Vektor Layer hinzufügen`
+
+   #. Datensatz :file:`/home/user/data/natural_earth/10m_geography_regions_elevation_points.shp`
+
+   #. :menuselection:`Öffnen`
+
+#. In gewünschten Ausschnitt zoomen und Darstellung Punktlayer bei Bedarf verbessern
+
+#. :menuselection:`Datei --> Projekt Speichern` -> :file:`mountains-local.qgs`
+
 #. Starten sie das QGIS Cloud plugin ( :menuselection:`Erweiterungen --> Cloud --> Cloud settings` ).
+
+#. :menuselection:`Account --> Login`
+
+#. :menuselection:`Services --> Publish Map` (Es folgt Meldung wegen lokalen Daten)
+
+#. :menuselection:`Upload Data`
+
+#. :menuselection:`Speichern` -> :file:`mountains.qgs`
+
+#. :menuselection:`Publish Map`
+
+#. Link "Webmap" auf Tab Services aufrufen
+
+#. Verbessern sie das Projekt wie im vorigen Kapitel
+
+#. Projekt aktualsieren mit :menuselection:`Publish Map`
+
 
 Suche und Selektion 
 =================================================================================
 
-#. Im folgenden modifizieren wir die Datei /home/$USER/www/qgiswebclient/js/Globaloptions.js. Machen sie vorher eine Sicherheitskopie.
+#. Im folgenden modifizieren wir die Datei /home/user/www/qgis-web-client/site/js/Globaloptions.js. Machen sie vorher eine Sicherheitskopie.
